@@ -15,7 +15,9 @@ mongoose
 app.get("/", (req ,res)=>{
   res.send("server code start")
 })
-
+app.get("/home" , (req ,res)=>{
+  res.send("welcome to nepal")
+})
 app.listen(PORT, () => {
   console.log(`server running on port:${PORT}`);
 });
