@@ -12,6 +12,10 @@ mongoose
 .catch((error) => {
   console.log(error);
 }); 
+app.get("/", (req ,res)=>{
+  res.send("server code start")
+})
+
 app.listen(PORT, () => {
   console.log(`server running on port:${PORT}`);
 });
