@@ -18,6 +18,9 @@ app.get("/", (req ,res)=>{
 app.get("/home" , (req ,res)=>{
   res.send("welcome to nepal")
 })
+app.get("/login" , (req ,res)=>{
+  console.log("demo");
+})
 app.listen(PORT, () => {
   console.log(`server running on port:${PORT}`);
 });
