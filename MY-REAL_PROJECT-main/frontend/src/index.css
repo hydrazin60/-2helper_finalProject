@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.post-content p {
+margin-bottom: 0.5rem;
+}
+
+body{
+  background-color: rgb(22, 16, 16);
+  color: white;
+}
+
+.post-content h1{
+   font-size: 1.5rem;
+   font-weight: 600; 
+   font-family: sans-serif;
+   margin: 1.5rem 0 ;
+}
+
+.post-content h2{
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    margin: 1.5rem 0 ;
+}
+
+.post-content a{
+   color: rgb(253, 21, 160);
+   font-weight: 500;
+   text-decoration: none;
+}
+
+.post-content a:hover{
+    text-decoration: underline;
+    background-color: rgb(147, 107, 107);
+    font-size: 1.3rem;
+}
+
+.dark .post-content a {
+    color: yellow;
+    background-color: #0000ff;
+}
+
+ 
+
+
+.Sign-In-page-Logo{
+    width: 10vw;
+  } 
+.Sign-In-Page-write{
+    font-weight: 600;
+    font-size: larger;
+}     
+ 
+ 
+ @keyframes circularBorderAnimation {
+    0% {
+      border-color: green;
+    }
+    25% {
+      border-color: blue;
+    }
+    50% {
+      border-color: rgb(255, 255, 9);
+    }
+    75% {
+      border-color: red;
+    }
+    100% {
+      border-color: rgb(4, 243, 4);
+    }
+  }
+  
+  /* Apply circular animation to the border */
+  .circular-border-animation {
+    animation: circularBorderAnimation 5s linear infinite;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
+  }
+  
