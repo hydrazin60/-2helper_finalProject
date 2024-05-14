@@ -5,8 +5,8 @@ import OAuthByGOOGLE from "../components/OAuthByGOOGLE";
 
 export default function Signup() {
   const navigate = useNavigate();
-  const[errorMessage , setErrorMessage] = useState(null)
-  const[loading , setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [classSelection, setClassSelection] = useState("");
   const [formData, setFormData] = useState({
@@ -37,14 +37,14 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.username || !formData.email || !formData.password) {
-      setErrorMessage('Please Fill Out All Fields.');
+      setErrorMessage("Please Fill Out All Fields.");
       setTimeout(() => {
         setErrorMessage(null);
       }, 2000);
       return;
     }
     try {
-      setLoading(true)
+      setLoading(true);
       const res = await fetch("/api/v1/user/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -59,8 +59,8 @@ export default function Signup() {
           setErrorMessage(null);
         }, 3000);
         setLoading(false);
-        if(res.ok){
-          navigate("/")
+        if (res.ok) {
+          navigate("/");
         }
       }
     } catch (err) {
@@ -216,14 +216,13 @@ export default function Signup() {
             <button
               type="submit"
               className="w-full bg-blue-600 text-white px-7 py-3 text-sm font-medium uppercase rounded shadow-md hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue800"
-            >{
-              loading ? (<span>Loading....</span>) : ('Sign Up')
-            }
+            >
+              {loading ? <span>Loading....</span> : "Sign Up"}
               Sign-Up
             </button>
-            {
-              errorMessage && ( <alert className="text-red-700" > {errorMessage} </alert> )
-            }
+            {errorMessage && (
+              <alert className="text-red-700"> {errorMessage} </alert>
+            )}
 
             <div className="my-4 flex items-center before:border-t before:flex-1 before:border-gray-400 after:border-t after:flex-1 after:border-gray-400">
               <p className="text-center font-semibold mx-4">OR</p>
