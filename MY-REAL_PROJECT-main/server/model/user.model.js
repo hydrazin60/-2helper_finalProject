@@ -4,17 +4,16 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      require: true,
+      required: true,
     },
     email: {
       type: String,
-      require: true,
+      required: true,
       unique: true,
     },
-
     password: {
       type: String,
-      require: true,
+      required: true,
     },
     userCollage: {
       type: String,
@@ -24,10 +23,10 @@ const userSchema = new mongoose.Schema(
     },
     classSelection: {
       type: String,
-      enum: ["Class-Xi", " Class-Xii ", "Dropper"],
+      enum: ["Class-Xi", "Class-Xii", "Dropper"],
     },
   },
-  { timeseries: true }
+  { timestamps: true } // corrected option
 );
 
 const User = mongoose.model("User", userSchema);
