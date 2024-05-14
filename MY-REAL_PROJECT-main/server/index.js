@@ -7,20 +7,14 @@ const app = express();
 mongoose
 .connect(process.env.MONGODB_URL)
 .then(() => {
-  console.log("MongoDb is Connected");
+  console.log(`MongoDb is Connected ${process.env.MONGODB_URL}`);
 })
 .catch((error) => {
   console.log(error);
 }); 
-app.get("/", (req ,res)=>{
-  res.send("server code start")
-})
-app.get("/home" , (req ,res)=>{
-  res.send("welcome to nepal")
-})
-app.get("/login" , (req ,res)=>{
-  console.log("demo");
-})
+ 
+
+
 app.listen(PORT, () => {
   console.log(`server running on port:${PORT}`);
 });

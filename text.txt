@@ -1,0 +1,11 @@
+# Start MongoDB service
+sudo systemctl start mongod
+
+# Enable MongoDB service to start on boot
+sudo systemctl enable mongod
+
+# Check MongoDB service status
+sudo systemctl status mongod
+
+# If MongoDB fails to start, check the logs for more details
+sudo journalctl -u mongod
