@@ -5,7 +5,7 @@ import { FaCamera } from "react-icons/fa";
 
 export default function Header() {
   // Function to handle sign-in
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(true);
   const handleSignOut = () => {
     setIsSignedIn(true);
   };
@@ -44,7 +44,7 @@ export default function Header() {
               <Avatar
                 className="mr-3"
                 alt="User settings"
-                img=""
+                img="https://scontent.fktm21-1.fna.fbcdn.net/v/t39.30808-6/295641266_762430441871611_3345287233543175930_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=14pWOmKzzgcQ7kNvgHqsdCu&_nc_ht=scontent.fktm21-1.fna&oh=00_AYBolZcpxyBDJ45bGEO8SsbVqEqbwicgy9orsz_Ij5CGIA&oe=665345F2"
                 rounded
               />
             }
